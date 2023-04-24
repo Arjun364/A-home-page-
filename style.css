@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 100%;
+    overflow: hidden;
+
+}
+.home-page{
+    width: 100%;
+    height: 100vh;
+    /* background: green; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.home-page .home-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20vh 0vh 0vh 0vh;
+    height: 30vh;
+
+}
+.home-page::before{
+    content: url(/img/Home-page-image.jpg);
+    transform: scale(1);
+    display: block;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.home-page nav{
+    width: 100%;
+    height: 10vh;
+    /* background: rgba(0, 0, 0, 0.195); */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0em 13em;
+
+}
+.home-page nav #right{
+    width: 23vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.home-page nav #right ul  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0em .5em 0em 0em;
+}
+.home-page nav #right ul li {
+    padding: .2em .02em;
+    margin: .5em .8em;
+    list-style: none;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+.home-page nav #right ul li::after{
+    content: '';
+    display: block;
+    background-color:rgb(255, 94, 0);
+    width: 100%;
+    height: 3px;
+    position: relative;
+    /* bottom: 100%; */
+    right: 90px;
+    transition: right ease-in .3s;
+    transform: scale(0);
+    border-radius: 5px;
+}
+.home-page nav #right ul li:hover::after{
+    transform: scale(1);
+    right: 0px;
+}
+.home-page nav #right ul li a{
+    text-decoration: none;
+    color: white;
+    transition: color ease-in-out .3s;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.134);
+    /* font-weight: 500; */
+}
+.home-page nav #right ul li a:hover{
+    color: rgb(255, 94, 0);
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.352);
+
+}
+.home-page nav #right button{
+    padding: .5em 1em;
+    border: none;
+    background: rgb(255, 94, 0);
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all ease-in .1s;
+}
+.home-page nav #right button:hover{
+    background-color: white;
+    color: rgb(255, 94, 0);
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.295);
+
+}
+.home-text{
+    position: relative;
+}
+.home-text h1 span{
+    background-color: aliceblue;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 0em 0em 0em.1em;
+    
+}
+.home-text h1 span::after{
+    content: '';
+    height: 3px;
+    width: 100%;
+    display: block;
+    transform: scale(1);
+    background-color: rgb(255, 94, 0);
+    transition: width ease-in .3s;
+}
+
